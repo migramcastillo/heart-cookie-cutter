@@ -6,7 +6,6 @@ Usage from CLI:
 
 import argparse
 from pathlib import Path
-from typing import Tuple
 
 import pandas as pd
 from sklearn.compose import ColumnTransformer

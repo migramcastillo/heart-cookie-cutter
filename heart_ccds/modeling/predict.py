@@ -6,7 +6,6 @@ Usage from CLI:
 
 import argparse
 from pathlib import Path
-from typing import Any, Dict
 
 import mlflow
 import mlflow.sklearn
