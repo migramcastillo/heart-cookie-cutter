@@ -40,11 +40,20 @@ entry_points:
 
   train:
     parameters:
-      run_id: {type: string}
-      data: {type: path, default: data/processed/train.csv}
+      data: {type: path, default: data/raw/heart.csv}
+      n_estimators: {type: int, default: 100}
+      max_depth: {type: string, default: "None"}
+      min_samples_split: {type: int, default: 2}
+      min_samples_leaf: {type: int, default: 1}
+      random_state: {type: int, default: 42}
     command: >-
       python -m heart_ccds.modeling.train
-      --run-id {run_id} --alpha {alpha}
+      --data {data}
+      --n-estimators {n_estimators}
+      --max-depth {max_depth}
+      --min-samples-split {min_samples_split}
+      --min-samples-leaf {min_samples_leaf}
+      --random-state {random_state}
 
   predict:
     parameters:
